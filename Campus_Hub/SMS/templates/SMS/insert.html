@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: cornsilk;">
+
+    <h1 style="text-align: center; background-color: gainsboro;">** INSERT RECORD **</h1>
+    <hr><br>
+    
+    {% if messages %}
+        {% for message in messages %}
+            <h3 style="text-align: center;">{{ message }}</h3>
+        {% endfor %}
+    {% endif %}
+
+
+    <div style="text-align: center;font-size: 20px;"><br>
+
+    <form method="post">
+        {% csrf_token %}
+ 
+    Name: <input type="text" name="name" placeholder="Enter Name" required><br><br><br>
+
+    Age: <input type="number" name="age" placeholder="Enter Age" required><br><br><br>
+
+    Gender: <select name="gender" required>
+        <option value="" >SELECT GENDER</option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+        <option value="O">Other</option>
+    </select><br><br><br>
+
+    Course: <input type="text" name="course" placeholder="Enter Course" required><br><br><br>
+
+    <button type="submit" style="text-align: center; background-color: gainsboro; height:35px; width:140px;">Insert Record</button><br><br><br>
+
+    </form>
+    <a href="{% url 'home' %}">Back to Home Page</a>
+    </div>
+
+
+</body>
+</html>

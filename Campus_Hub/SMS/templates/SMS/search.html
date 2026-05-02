@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: cornsilk;">
+    <h1 style="text-align: center; background-color: gainsboro;">** SEARCH RECORD **</h1>
+    <hr><br>
+
+    <div style="text-align: center; font-size: 20px;">
+
+    <form method="post">
+        {% csrf_token %}
+
+    Enter ID: <input type="number" name="id" placeholder="Enter Id"><br><br>
+
+    <button type="submit" name="action" value="Search" style="text-align: center; background-color: gainsboro; height: 35px; width: 140px;">Search</button>
+
+    <button type="submit" name="action" value="Search_All" style="text-align: center; background-color: gainsboro; height: 35px; width: 140px;">Search_All</button>
+
+    </form>
+
+    <p>{{ message }}</p>
+
+  <div style="text-align: center;">
+    {% if student %}
+        <table border="2" style="margin: auto;">
+            <tr>
+                <th style="padding: 10px;">ID</th>
+                <th style="padding: 10px;">Name</th>
+                <th style="padding: 10px;">Age</th>
+                <th style="padding: 10px;">Gender</th>
+                <th style="padding: 10px;">Course</th>
+            </tr>
+            
+            {% for s in student %}
+            <tr>
+                <td style="padding: 10px;">{{ s.id }}</td>
+                <td style="padding: 10px;">{{ s.name }}</td>
+                <td style="padding: 10px;">{{ s.age }}</td>
+                <td style="padding: 10px;">{{ s.gender }}</td>
+                <td style="padding: 10px;">{{ s.course }}</td>
+            </tr>
+            {% endfor %}
+        </table><br>
+    {% endif %}
+     </div>
+    <a href="{% url 'home' %}" style="text-align: center;">Back To Home Page</a>
+
+    </div>
+</body>
+</html>
