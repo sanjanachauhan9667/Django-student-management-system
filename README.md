@@ -24,13 +24,17 @@ It allows users to manage student records with basic CRUD operations (Create, Re
 
 ### 1️⃣ Clone the repository
 
+'''
 git clone https://github.com/sanjanachauhan9667/Django-student-management-system.git
 cd Django-student-management-system
+'''
 
 ### 2️⃣ Create virtual environment
 
+'''
 python -m venv venv
 venv\Scripts\activate   # Windows
+'''
 
 ### 3️⃣ Install dependencies
 
