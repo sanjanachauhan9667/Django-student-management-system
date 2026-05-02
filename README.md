@@ -38,19 +38,27 @@ venv\Scripts\activate   # Windows
 
 ### 3️⃣ Install dependencies
 
+```
 pip install django
+```
 
 ### 4️⃣ Run migrations
 
+```
 python manage.py migrate
+```
 
 ### 5️⃣ Run the server
 
+```
 python manage.py runserver
+```
 
 ### 6️⃣ Open in browser
 
+```
 http://127.0.0.1:8000/
+```
 
 ## Future Improvements
 
