@@ -24,7 +24,7 @@ It allows users to manage student records with basic CRUD operations (Create, Re
 
 ### 1️⃣ Clone the repository
 
-git clone https://github.com/your-username/Django-student-management-system.git
+git clone https://github.com/sanjanachauhan9667/Django-student-management-system.git
 cd Django-student-management-system
 
 ### 2️⃣ Create virtual environment
@@ -54,9 +54,7 @@ http://127.0.0.1:8000/
 * Improve UI/UX design
 * Add REST API
 
-## 👩‍💻 Author
+## Author
 
 Sanjana Chauhan
 
-
-Give it a ⭐ on GitHub!
